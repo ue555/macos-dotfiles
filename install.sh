@@ -52,6 +52,12 @@ ln -sfn "$WEZTERM_SOURCE" "$WEZTERM_TARGET"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install chromium
+brew install firefox
+brew install gh
+brew install goenv
+brew install opera
+brew install brave
+brew install vivaldi
 xattr -cr /Applications/Chromium.app
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
