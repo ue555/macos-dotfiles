@@ -56,7 +56,7 @@ brew install firefox
 brew install gh
 brew install goenv
 brew install opera
-brew install brave
+brew install --cask brave-browser
 brew install vivaldi
 xattr -cr /Applications/Chromium.app
 
