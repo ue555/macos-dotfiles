@@ -7,3 +7,6 @@ fi
 if [ -s "$NVM_DIR/bash_completion" ]; then
 	. "$NVM_DIR/bash_completion"
 fi
+
+alias vi='nvim'
+alias vim='nvim'

@@ -3,6 +3,8 @@
 set -euo pipefail
 
 DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
+NVIM_SOURCE="$DOTFILES_DIR/lazy.nvim/nvim"
+NVIM_TARGET="$HOME/.config/nvim"
 WEZTERM_SOURCE="$DOTFILES_DIR/.wezterm.lua"
 WEZTERM_TARGET="$HOME/.wezterm.lua"
 ZPROFILE_SOURCE="$DOTFILES_DIR/.zprofile"
@@ -12,6 +14,7 @@ ZSHRC_TARGET="$HOME/.zshrc"
 export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
 
 mkdir -p "$DOTFILES_DIR"
+mkdir -p "$HOME/.config"
 
 if [ ! -f "$ZPROFILE_SOURCE" ]; then
 	cat <<'EOF' > "$ZPROFILE_SOURCE"
@@ -45,9 +48,14 @@ if [ -e "$WEZTERM_TARGET" ] && [ ! -L "$WEZTERM_TARGET" ]; then
 	mv "$WEZTERM_TARGET" "$WEZTERM_TARGET.bak"
 fi
 
+if [ -e "$NVIM_TARGET" ] && [ ! -L "$NVIM_TARGET" ]; then
+	mv "$NVIM_TARGET" "$NVIM_TARGET.bak"
+fi
+
 ln -sfn "$ZPROFILE_SOURCE" "$ZPROFILE_TARGET"
 ln -sfn "$ZSHRC_SOURCE" "$ZSHRC_TARGET"
 ln -sfn "$WEZTERM_SOURCE" "$WEZTERM_TARGET"
+ln -sfn "$NVIM_SOURCE" "$NVIM_TARGET"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -55,6 +63,7 @@ brew install chromium
 brew install firefox
 brew install gh
 brew install goenv
+brew install neovim
 brew install opera
 brew install --cask brave-browser
 brew install vivaldi
