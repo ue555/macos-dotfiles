@@ -68,6 +68,7 @@ brew install opera
 brew install slack
 brew install --cask brave-browser
 brew install --cask codex
+brew install --cask microsoft-edge
 brew install vivaldi
 xattr -cr /Applications/Chromium.app
 
