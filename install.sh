@@ -67,8 +67,11 @@ brew install neovim
 brew install opera
 brew install slack
 brew install --cask brave-browser
+brew install --cask codex
 brew install vivaldi
 xattr -cr /Applications/Chromium.app
+
+curl -fsSL https://claude.ai/install.sh | bash
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
