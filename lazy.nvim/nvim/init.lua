@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.opt.number = true
 
 local current_listchars = vim.opt.listchars:get()
