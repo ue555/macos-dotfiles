@@ -210,6 +210,7 @@ local plugins = {
 		{ import = "plugins.vim-mr-quickfix" },
 		{ import = "plugins.lazygit" },
 		{ import = "plugins.nvim-insx" },
+		{ import = "plugins.render-markdown" },
 	},
 }
 
