@@ -1,0 +1,6 @@
+# lazy.nvimがインストールするプラグイン本体とキャッシュは管理しない
+lazy.nvim/.local/
+lazy.nvim/.cache/
+
+# GitHub Copilot認証情報は管理しない
+lazy.nvim/github-copilot/
